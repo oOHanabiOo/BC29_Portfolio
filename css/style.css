@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* ===HEADER=== */
+header {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-brand i {
+    color: green;
+    font-size: 2.5rem;
+}
+.navbar-brand span {
+    font-size: 2rem;
+}
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+.navbar-nav .nav-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    transition: all .5s;
+}
+.navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+.navbar-nav .nav-item:hover .nav-link {
+    color: green;
+}
+.navbar-nav .nav-item.active a {
+    color: green !important;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+/* ===CAROUSEL=== */
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.carousel-item:nth-child(1) {
+    background-image: url(../imgs/finland.jpg);
+}
+.carousel-item:nth-child(2) {
+    background-image: url(../imgs/mountains.jpg);
+}
+.carousel-item:nth-child(3) {
+    background-image: url(../imgs/mountains-1.jpg);
+}
+.img__thumb {
+    width: 150px;
+    margin: auto;
+    margin-top: 200px;
+}
+.carousel-caption {
+    margin-bottom: 180px;
+}
+.carousel-caption h3 {
+    font-size: 4rem;
+}
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+.carousel-indicators {
+    margin-bottom: 50px;
+}
+
+/* ===PROJECT=== */
+#project {
+    margin-top: 100px;
+}
+.project__content ul {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.project__content li {
+    margin: 0 5px;
+}
+.card {
+    border-radius: 20px;
+}
+.card img {
+    border-radius: 20px 20px 0 0;
+}
+.card-body {
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    border: transparent;
+    transition: all .5s;
+}
+.card-body h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all .3s;
+}
+.card-body p {
+    color: grey;
+    padding-bottom: 20px;
+}
+.col-4 {
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+.col-4:hover .card-body {
+    border: 1px solid green;
+    border-top: none;
+}
+.col-4:hover h4 {
+    color: green;
+}
